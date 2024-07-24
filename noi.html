@@ -1435,62 +1435,280 @@
     
 </script>
 
-// 津津的储蓄计划 不会
-<script type="" id="/ch0105/20">
-    var n = 0 // 月初剩余的钱
-    var ramain = 0
+// 津津的储蓄计划
+<script type="1" id="/ch0105/20">
+  var remain = 0 //月尾的钱
+  var stopped = false
 
-  for (var i = 0; i < 12; i++) {
-    var budget = +prompt("预算")
-    var n = remain + 300
-    var remain = n - budget
-    if (remain < 0) {
-      console.log ("-" + (i + 1))
+  for (var i = 1; i <= 12; i++) {
+    remain = remain + 300 
+    var budget = +prompt("预算") //输入她的预算 
+  
+    // 手上的钱不够预算
+    if (remain < budget) {
+      console.log (-i)
+      stopped = true
       break
     } 
+
+    remain = remain - budget //月末花完钱了 
+   
+    // 够预算
     if (remain >= 100 ) {
-      remain = remain % 100
-      var bank = bank + (remain - remain / 100)
+      var 零钱 = remain % 100 //计算存完以后剩下的钱
+      var bank = bank + (remain - 零钱 )
+      remain = 零钱
     } 
   } 
-    if (remain > 0, i > 10)
+  
+  if (!stopped) {
     console.log(bank * 1.2 + remain)
+  }
+  
   
 </script>
 
 
 // 药房管理
 <script type="1" id="/ch0105/23">
-    var 药品总量 = +prompt("药品总量")
-    var 取药人数 = +prompt("取药人数")
-    var 希望取走的数量的和 = 0
+    var totalDrug = +prompt("药品总量")
+    var totalPeople = +prompt("取药人数")
+    var HopeDrug = 0
 
-    for (var i = 0; i < 6; i++) {
-      var 希望取走的数量 = +prompt("希望取走的数量");
-      希望取走的数量的和 = 希望取走的数量的和 + 希望取走的数量
-      if (希望取走的数量的和 > 药品总量) {
-        var 可以领到药的人数 = i 
+    for (var i = 0; i < totalPeople; i++) {
+      var hopeTake = +prompt("希望取走的数量");
+      HopeDrug = HopeDrug + hopeTake
+      if (HopeDrug > totalDrug) {
+        var canDrug = i 
         break
       }
     }
     
-    console.log(可以领到药的人数)
+    console.log(canDrug)
     
 </script>
 
 // 正常血压 血压连续正常
 <script type="1" id="/ch0105/23">
-    var n = +prompt("次数")
-    var  正常次数 = 0 
+    var time = +prompt("次数")
+    var c = 0 //连续正常次数
 
-    for (var i = 0; i < 4; i++) {
+    for (var i = 1; i <= time; i++) {
       var m = +prompt("收缩压")
       var n = +prompt("舒张压")
       if (m >= 90 && m <= 140 && n >= 60 && n <= 90) {
-        正常次数 = 正常次数 + 1  
-      } else 
+        c = c + 1  
+      } else {
+        c = 0
+      }
     }
     
-    console.log(正常次数)
+    console.log(c)
     
 </script>
+
+求特殊自然数 不会
+<script type="1" id="/ch0105/24">
+  var a
+  var b
+  var c 
+  
+  a * 7 ** 2 + b * 7 + c == c * 9 ** 2 + b * 9 + a 
+  console.log(a + b + c);
+
+
+</script>
+
+// 统计满足条件的4位数个数
+<script type="1" id="/ch0105/25">
+  var a = +prompt("几个数")
+  var q = 0 // 满足要求的数
+  for (var i = 0; i < a; i++) {
+    var n = +prompt("具体数字")
+    var gewei = n % 10
+    var qianwei =(n - n % 1000) / 1000
+    var shiwei = Math.floor(n / 10) % 10
+    var baiwei = Math.floor(n / 100) % 10
+    if (gewei - qianwei - baiwei - shiwei > 0) {
+      q = q + 1 
+    }
+    console.log(q);
+  }
+
+</script>
+
+// 统计满足条件的4位数个数
+<script type="1" id="/ch0105/26">
+  var a = +prompt("几个数")
+  var q = 0 // 满足要求的数
+  for (var i = 0; i < a; i++) {
+    var n = +prompt("具体数字")
+    var gewei = n % 10
+    var qianwei =(n - n % 1000) / 1000
+    var shiwei = Math.floor(n / 10) % 10
+    var baiwei = Math.floor(n / 100) % 10
+    if (gewei - qianwei - baiwei - shiwei > 0) {
+      q = q + 1 
+    }
+    console.log(q);
+  }
+
+</script>
+
+// 级数求和
+<script type="1" id="/ch0105/27">
+var k = +prompt('')
+var sn = 0
+
+for (var i = 0; ; i++) {
+  var sn = sn + 1 / (i + 1)
+  var n = i + 1
+  if (sn > k) {
+    break
+  }
+}
+console.log(n);
+</script>
+
+// 分离整数的各个数位 需要查
+<script type="1" id="/ch0105/28">
+var k = +prompt('')
+
+for (var i = 0; ; i++) {
+  v = k % 10
+  console.log(v);
+  k =(k - v)/ 10
+  if(k < 10) {
+    console.log(k);
+  break
+  }
+}
+</script>
+
+// 数字反转 不会
+<script type="1" id="/ch0105/29">
+var k = +prompt()
+
+for (i = 1; ; i++) {
+  if (k < 10) {
+    console.log(-k);
+  } else {
+    v = k % 10
+  }
+  
+  remain = (k - v) / 10
+  if (v !== 0 && remain >= 10) {
+    uv = v * (10 ** i)
+    k = v + uv
+  } 
+  if (remain < 10)
+    uv = remain ** i + 
+}
+</script>
+
+
+// 含k个3的数
+<script type="1" id="/ch0105/30">
+var m = +prompt()
+var k = +prompt()
+var a = 0 // 含有3的个数
+
+if (m % 19 !== 0) {
+  console.log("NO")
+} else {
+  while (m !== 0) {
+    n = m % 10  
+    if (n == 3) {
+      a = a + 1
+      m = Math.floor(n)
+        if (m == 0, a == 3){
+          console.log("YES")
+        }  
+    }
+    }
+  }
+</script>
+
+// 开关灯 不会
+<script type="1" id="/ch0105/31">
+var n  = +prompt()
+var k = +prompt()
+var a = 0 // 含有3的个数
+
+
+</script>
+
+// 求分数序列和
+<script type="1" id="/ch0105/32">
+var a = 2 //一开始a的值
+var b = 1 //一开始b的值
+var sn = 0 //这个序列的和
+var n = +prompt()
+for (var i = 0; i < n; i++) {
+  sn = sn + a / b
+  b = a 
+  a = a + b - 1
+}
+  
+console.log(sn.toFixed(4))
+</script>
+
+// 计算分数加减表达式的值
+<script type="1" id="/ch0105/33">
+var n = +prompt()
+var a = 1 // 分母
+var b = 0 // 分子
+sn = 0 
+for (var i = 1; i <= n; i++) {
+  b = b + 1 
+  if (i % 2 == 1) {
+    a = 1
+  } else {
+    a = -1
+  }
+  sn = sn + (a / b) 
+}
+  
+console.log(sn.toFixed(4))
+</script>
+
+// 求阶乘的和 不会
+<script type="1" id="/ch0105/34">
+  var n = +prompt()
+  var sn = 0
+  for (var i = 1; i <= n; i++) {
+    sn = sn + 1 * i 
+  }
+  </script>
+
+// 求出e的值 不会
+<script type="1" id="/ch0105/35">
+  var n = +prompt()
+  var sn = 0
+  for (var i = 1; i <= n; i++) {
+    sn = sn + 1 * i 
+  }
+  </script>
+
+// 计算多项式的值 感觉答案给错了
+<script type="1" id="/ch0105/36">
+  var n = +prompt()
+  var x = parseFloat(prompt())
+  var sn = 0
+  for (var i = 0; i < n; i++) {
+    sn = sn + x ** i
+  }
+  console.log(sn.toFixed(2));
+  </script>
+
+
+// 雇佣兵 做到雇佣兵
+<script type="1" id="/ch0105/37">
+  var n = +prompt()
+  var x = parseFloat(prompt())
+  var sn = 0
+  for (var i = 0; i < n; i++) {
+    sn = sn + x ** i
+  }
+  console.log(sn.toFixed(2));
+  </script>
