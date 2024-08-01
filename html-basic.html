@@ -76,9 +76,88 @@
   <hr>
   <h2><strong>Google搜索</strong></h2>
   
+    <form action="https://www.google.com.hk/search/" target="_blank">
+      <input name="q" type="text"></div>
+      <input type="hidden" name="ie" value="UTF-8">
+      <input type="hidden" name="sourceid" value="UTF">
+      <button>在新窗口打开搜索结果</button>
+    </form>
   <hr>
-  <p>个人信息调查表</p>
+  <form action="">
+    <p>个人信息调查表</p>
+    <dl>
+      <dt>性别</dt>
+      <dd>
+        <label><input name="gender" type="radio">男</label>
+        <label><input name="gender" type="radio">女</label>
+      </dd>
+      <dd>
+        <select name="age" value>
+          <option value="" hidden></option>
+          <optgroup label="少年">
+            <option>1到6岁</option>
+            <option>6到12岁</option>
+          </optgroup>
+          <optgroup label="青年">
+            <option>13到15岁</option>
+            <option>16到18岁</option>
+          </optgroup>
+          <optgroup disabled label="少年">
+            <option>13到15岁</option>
+            <option>16到18岁</option>
+          </optgroup>
+        </select>
+      </dd>
+      <dt>生日</dt>
+      <dd>
+        <input type="date" value="2021-11-04" name="birthday">
+      </dd>
+      <dt>生辰</dt>
+      <dd>
+        <input type="time">
+      </dd>
+      <dt>生辰</dt>
+      <dd>
+        <label>
+          <input hidden type="file">点我上传照片，我比文件上传按钮好看
+        </label>
+      </dd>
+      <dt>自我介绍</dt>
+      <dd>
+        <textarea>&lt;/textarea></textarea>
+      </dd>
+    </dl>
+    </form>
+    
+    <fieldset disabled>
+      <legend>这里全部禁用了</legend>
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+    </fieldset>
+    <div>
+      <button>提交</button>
+      <button type="reset">重置</button>
+    </div>
+    
+    //这里差一个表格
+    
+    <hr>
+    
+    <pre>
+                                                                      &nbsp;
+                                                                      &nbsp;
+                                                                    </pre>
+    
+    <hr>
+    
+    <a href="https://www.mi.com/ target=" _blank">小米</a>//这里需要改
+    
+    <div>aaa&nbsp;&nbsp;&nbsp;&nbsp;bbbbb</div>
+    <pre>aaa       bbbb</pre>
 
-  <div id="pagebottom"></div>
+    >>>>>>>>>>>>>>>>>>>>>>&lt;<<<<<<<<<<<<<<<<<<&nbsp;&lt;span>&lt;/span>
+    <div id="pagebottom"></div>
   </body>
 </html>
