@@ -18,19 +18,19 @@
       color: red;
     }
 
-    p.a[tabindex="1"]:active {
-      color: greenyellow;
-    }
-
     p.a[tabindex="1"]:focus {
       color: blue;
     }
 
-    .a.c>span {
+    p.a[tabindex="1"]:active {
+      color: greenyellow;
+    }
+
+    .a.c > span {
       color: red;
     }
 
-    .a.c>span>span:first-child {
+    .a.c > span > span:first-child {
       color: green;
     }
 
@@ -38,20 +38,18 @@
       color: bule;
     }
 
-    div>a[href]:visited {
+    div>a:visited {
       color: orange;
     }
 
-    div>a[href]:link {
+    div>a:link {
       color: pink;
     }
 
-    /* 不太对*/
-    div>a[href~="mailto:" i] {
+    div>a[href^="mailto:" i] {
       color: blue;
     }
 
-    /* 不太对*/
     div>a[href^="tel" i] {
       color: yellow;
     }
@@ -78,8 +76,19 @@
     div.b li:nth-child(n+35):nth-child(-n+50) {
       color: blue;
     }
+    /* 2 3 4 5 6 7的倍数  且没有选择自己 其实4和6不用划*/
+    div.prime li:nth-child(1),
+    div.prime li:nth-child(2n+4),
+    div.prime li:nth-child(3n+6),
+    div.prime li:nth-child(5n+10),
+    div.prime li:nth-child(7n+14){
+      color: red;
+    }
+   
+    div.prime li:not(:nth-child(1)):not(:nth-child(2n+4)):not(:nth-child(3n+6)):not(:nth-child(5n+10)):not(:nth-child(7n+14)) {
+      color: green;
+    }
 
-    div.prime li:not()
   </style>
   <style data-id="immersive-translate-input-injected-css">
     .immersive-translate-input {
