@@ -6,50 +6,48 @@
   <meta name="viewport" content="width=device-width">
   <title>html-basic</title>
   <style>
-    header {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      background-color: red;
+    * {
+  background-color: rgba(0,0,0,0.08);
+  box-shadow:inset 0 0 2px green;
+}
+
+body {
+  xmargin:0
+}
+  header {
+      margin: 20px;
+      background-color: red;  
+  
     }
 
     header > div {
       width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      margin:auto;
     }
 
     main {
-      border: 3px solid black;
-      margin: auto;
-      width: 600px;
-      padding: 10px;
+      border: 2px solid black;
+      box-sizing: border-box;
+      width:600px;
+      padding: 1em;
+     margin:auto;
+      
     }
 
-    main > p {
-      margin: auto;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      width: 580px;
-      height:65px;
-      overflow:auto;
-    }
-
-    main > p:nth-child(2) {
+ main div {
       background-color: violet;
-      height: 30px;
+      height: 2em;
+      margin-top: 1em;
+     margin-bottom:1em;
     }
 
-    main > p:nth-child(2):hover {
-      margin-left: -1px;
-      margin-right: -1px;
+
+    main div:hover {
+      margin-left: -1em;
+      margin-right: -1em;
     }
 
-    section {
-      margin: auto;
-      width: 1px;
-      border: 50px solid red;
-      border-color: transparent transparent orange transparent;
-    }
+   
   </style>
 </head>
 
