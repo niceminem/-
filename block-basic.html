@@ -6,57 +6,42 @@
   <meta name="viewport" content="width=device-width">
   <title>html-basic</title>
   <style>
-    body>main:nth-child(1) {
-      height: 20px;
-    }
-
-
-    body>main:nth-child(2) {
+    header {
+      margin-top: 20px;
+      margin-bottom: 20px;
       background-color: red;
     }
 
-    div:nth-child(1) {
-      box-shadow: inset 0 0 1px red;
+    header > div {
       width: 600px;
-      height: 500x;
       margin-left: auto;
       margin-right: auto;
     }
 
-    main:nth-child(3) {
+    main {
       border: 3px solid black;
       margin: auto;
       width: 600px;
-      margin-top: 15px;
+      padding: 10px;
     }
 
-    p:nth-child(1) {
+    main > p {
       margin: auto;
-      width: 580px;
       margin-top: 15px;
       margin-bottom: 15px;
-      height:50px;
+      width: 580px;
+      height:65px;
       overflow:auto;
     }
 
-    p:nth-child(2) {
+    main > p:nth-child(2) {
       background-color: violet;
-      margin: 20px;
       height: 30px;
     }
 
-    p:nth-child(2):hover {
+    main > p:nth-child(2):hover {
       margin-left: -1px;
       margin-right: -1px;
-    }
-
-    p:nth-child(3) {
-      margin: auto;
-      width: 580px;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      height:70px;
-      overflow:auto;
     }
 
     section {
@@ -69,13 +54,12 @@
 </head>
 
 <body>
-
-  <main></main>
-  <main>
-    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt at, ea natus cupiditate assumenda deserunt
-      ex maxime dignissimos. Soluta laudantium id architecto fugit labore fuga consequatur placeat
-      laboriosam dolorum! Incidunt!</div>
-  </main>
+<header>
+  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt at, ea natus cupiditate assumenda deserunt
+    ex maxime dignissimos. Soluta laudantium id architecto fugit labore fuga consequatur placeat
+    laboriosam dolorum! Incidunt!
+    </div>
+    </header>
 
 
   <main>
