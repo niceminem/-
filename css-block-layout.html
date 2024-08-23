@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://pimingxin.github.io/miao/css-block-layout.html -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: -1px
+    }
+
+    .p0 {
+      height: 30px;
+      border: 3px solid;
+      background-color: pink;
+      width: 170px;
+      margin-bottom: -1px;
+      margin-top: 25px;
+    }
+
+    p.p0:hover {
+      background-color: red;
+    }
+
+    header {
+      background-color: black;
+    }
+
+    header p.p1 {
+      color: white;
+      width: 600px;
+      margin: auto;
+    }
+
+    p.p2 {
+      width: 600px;
+      margin: auto;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    div#d1 {
+      box-sizing: border-box;
+      width: 600px;
+      height: 220px;
+      margin: auto;
+      background-color: transparent;
+    }
+
+
+
+    div:not(#d1):hover {
+      background-color: red;
+    }
+
+
+    div:not(#d1) {
+      box-sizing: border-box;
+      height: 40px;
+      width: 180px;
+      border: 3px solid black;
+      margin-bottom: 15px;
+      background-color: pink;
+      text-align: center
+    }
+
+    div:nth-child(n+5) {
+      margin-left: 210px;
+    }
+
+
+    div:nth-child(n+9) {
+      margin-left: 420px;
+    }
+
+    div:nth-child(5) {
+      margin-top: -220px;
+    }
+
+    div:nth-child(9) {
+      margin-top: -220px;
+    }
+
+
+    p.p3 {
+      box-sizing: border-box;
+      height: 40px;
+      width: 600px;
+      margin: auto;
+      border-bottom: 1px dashed black;
+      padding-bottom: 20px;
+    }
+
+    p.p3.p4 {
+      margin-bottom: -3px;
+    }
+
+    main {
+      background-color: rgb(238, 138, 238);
+    }
+
+    p.p5 {
+      width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body style="">
+  <p class="p0">
+  <header>
+    <p class="p1">hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world
+      请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果</p>
+  </header>
+  <p class="p2">页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+    页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+    页面主体 宽度600px</p>
+  <div id="d1">
+
+    <div>宽180高40(包含边框)</div>
+    <div>水平间隙30px</div>
+    <div>垂直间隙15px</div>
+    <div>边框宽度3px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+
+    <div>产品</div>
+    <div>产品</div>
+
+    <div>产品</div>
+    <div>产品</div>
+
+  </div>
+
+
+
+  <p class="p3">link</p>
+  <p class="p3">link</p>
+  <p class="p3">link</p>
+  <p class="p3">link</p>
+  <p class="p3 p4">link</p>
+  <main>
+    <p class="p5">©版权所有<br>本页所有布局均使用块元素</p>
+
+  </main>
+
+</body>
+
+</html>
