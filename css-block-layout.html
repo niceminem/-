@@ -10,7 +10,7 @@
   <title>Document</title>
   <style>
     body {
-      margin: -1px
+      margin: 0;
     }
 
     .p0 {
@@ -30,7 +30,7 @@
       background-color: black;
     }
 
-    header p.p1 {
+    .p1 {
       color: white;
       width: 600px;
       margin: auto;
@@ -38,9 +38,7 @@
 
     p.p2 {
       width: 600px;
-      margin: auto;
-      margin-top: 15px;
-      margin-bottom: 15px;
+      margin: 20px auto;
     }
 
     div#d1 {
@@ -75,36 +73,28 @@
       margin-left: 420px;
     }
 
-    div:nth-child(5) {
+    div:nth-child(4n+5) {
       margin-top: -220px;
     }
 
-    div:nth-child(9) {
-      margin-top: -220px;
-    }
-
-
-    p.p3 {
-      box-sizing: border-box;
-      height: 40px;
-      width: 600px;
+  
+    .links  {
+      width:600px;
       margin: auto;
-      border-bottom: 1px dashed black;
-      padding-bottom: 20px;
+      
     }
 
-    p.p3.p4 {
-      margin-bottom: -3px;
+    .links > li {
+      border-bottom: 1px dotted;
+      list-style: none;
     }
 
-    main {
-      background-color: rgb(238, 138, 238);
+    .links > :last-child {
+      border-bottom: none;
     }
-
     p.p5 {
-      width: 600px;
-      margin: auto;
       text-align: center;
+      background-color:violet;
     }
   </style>
 </head>
@@ -137,16 +127,18 @@
 
   </div>
 
+  <ul class="links">
+    <li>link</li>
+    <li>link</li>
+    <li>link</li>
+    <li>link</li>
+    <li>link</li>
+  </ul>
 
-  <p class="p3">link</p>
-  <p class="p3">link</p>
-  <p class="p3">link</p>
-  <p class="p3">link</p>
-  <p class="p3 p4">link</p>
-  <main>
+
     <p class="p5">©版权所有<br>本页所有布局均使用块元素</p>
 
-  </main>
+  
 
 </body>
 
