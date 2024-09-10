@@ -12,8 +12,8 @@
 
   <style>
     * {
-      background-color: rgba(0, 0, 0, 0.08);
-      box-shadow: inset 0 0 1px red;
+      xbackground-color: rgba(0, 0, 0, 0.08);
+      xbox-shadow: inset 0 0 1px red;
     }
 
     header {
@@ -28,28 +28,34 @@
 
     body {
       height: 100%;
+      margin: 0;
     }
     div {
       height: calc(100% - 100px);
+      width: 100%;
+      font-size: 0;
+    }
+    aside {
+      height: 100%;
+      display: inline-block;
+      width: 240px;
+      background-color:sienna ;
+      font-size: 16px;
       overflow: auto;
     }
-aside {
- display:flow-root;
- 
-  background-color:sienna ;
-  width: 200px;
-}
     ul {
-      display: inline-block;
-      background-color: sienna;
-      width: 200px;
+      background-color:sienna ;
+      height: 100%;
     }
 
+
     main {
+      height: 100%;
       display: inline-block;
       background-color: teal;
-      height:calc(100% - 100px);
-      width: 600px;
+      width: calc(100% - 240px);
+      font-size: 16px;
+      overflow: auto;
     }
   </style>
 
